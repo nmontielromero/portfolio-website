@@ -1,0 +1,35 @@
+/* Style for the table header row */
+th {
+font-weight:bold;
+text-align: center;
+background-color: #a6eaf5;
+border: 1px solid #e7b1ec;
+padding: 8px ;
+}
+/* Style for TIME column */
+td:first-child {
+font-weight:bold;
+text-align: center;
+background-color: #e7b1ec;
+border: 1px solid rgb(144, 226, 246);
+padding: 8px ;  
+}
+/* Default Style for <td>, <h1>...<h6> elements */
+td, h1,h2,h3,h4,h5,h6 {
+font-family: Arial, sans-serif;
+font-size: 14px center;
+color: #623dca;
+padding: 8px ;
+border:1px solid rgb(251, 3, 230);  
+}
+/* Default style for <a> element */
+a:link {
+color: #f2ee14;
+text-decoration: none;
+}
+a:visited {
+color: #2ba2e2;
+}
+a:hover {
+background-color: rgb(3, 62, 11);
+}
