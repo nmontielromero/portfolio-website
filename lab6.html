@@ -1,0 +1,39 @@
+<html>
+<head>
+  <title>Guest Distribution</title>
+</head>
+<body>
+  <h1>Wedding Banquet Planner</h1>
+<script>
+    function distributeGuests(numGuests, numTables) {
+      if (numGuests <= 0 || numTables <= 0) {
+        alert("Number of guests and tables must be greater than 0.");
+        return;
+      }
+      const guestsPerTable = Math.floor(numGuests / numTables);
+      const remainingGuests = numGuests % numTables;
+      const distribution = [];
+
+      for (let i = 0; i < numTables; i++) {
+        distribution.push(guestsPerTable);
+      }
+
+      for (let i = 0; i < remainingGuests; i++) {
+        distribution[i]++;
+      }
+
+      return distribution;
+    }
+const numberOfGuests = parseInt(prompt("Enter the number of guests:"));
+    const numberOfTables = parseInt(prompt("Enter the number of tables:"));
+    const guestDistribution = distributeGuests(numberOfGuests, numberOfTables);
+
+    document.write("<h2>Guest distribution:</h2>");
+    document.write("<ul>");
+    for (let i = 0; i < guestDistribution.length; i++) {
+      document.write("<li>Table " + (i + 1) + ": " + guestDistribution[i] + " guests</li>");
+    }
+    document.write("</ul>");
+  </script> 
+</body>
+</html>
